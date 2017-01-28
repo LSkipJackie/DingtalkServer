@@ -57,3 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dingtalk', github: 'sjtudoit/DingTalk'
 
 gem 'redis-rails'
+
+# cors
+gem 'rack-cors'
