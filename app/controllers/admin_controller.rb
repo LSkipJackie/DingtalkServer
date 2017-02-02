@@ -28,6 +28,7 @@ class AdminController < ApplicationController
   # 查询钉钉上的所有用户
   def all_dingtalk_users
     server = Dingtalk::Server.new(Dingtalk.corpid, Dingtalk.corpsecret)
-    render server.query_all_users
+    users = server.query_all_users
+    render json: users.map { |u| {name: u.name, userid: u.userid} }
   end
 end
