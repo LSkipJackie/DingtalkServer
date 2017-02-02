@@ -24,10 +24,4 @@ class AdminController < ApplicationController
     end
     render json: result
   end
-
-  # 查询钉钉上的所有用户
-  def all_dingtalk_users
-    server = Dingtalk::Server.new(Dingtalk.corpid, Dingtalk.corpsecret)
-    render server.query_all_users
-  end
 end
